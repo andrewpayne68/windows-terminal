@@ -28,12 +28,14 @@ Fix Source Error on Winget option 1
     winget source reset --force
     winget source update
 <br />
+
 Fix Source Error on Winget option 2
 -----------------------------
 
     Add-AppxPackage -Path '.\Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle'
     winget -v
 <br />
+
 Fix Source Error on Winget option for server 2022
 -----------------------------
 
@@ -41,6 +43,7 @@ Fix Source Error on Winget option for server 2022
 
 
 <br />
+
 Install Windows Terminal (if needed)
 -----------------------------
 
@@ -58,11 +61,13 @@ Install PowerShell 7
 
     winget install Microsoft.PowerShell
 <br />
+
 Install JanDeDonneleer's OhMyPosh for Windows Terminal
 -----------------------------------------------------
 
     winget install JanDeDobbeleer.OhMyPosh
 <br />
+
 Install Nerd Font
 -----------------
 
@@ -70,8 +75,9 @@ Install `IosevkaTermNerdFontMono-Regular.ttf` Nerd Font (included in repo files)
 
 
 <br />
+
 Files
--
+------
 
 Copy both `jandedobbeleer.omp.json` and `powershell.config.json` to home dir (~)  or C:\USERS\USERNAME
 
@@ -79,6 +85,7 @@ Copy `Microsoft.PowerShell_profile.ps1` to the $profile path (C:\USERS\DOCUMENTS
 
 
 <br />
+
 Open Terminal Settings
 -------------
 
@@ -92,18 +99,21 @@ Open Terminal Settings
 Restart Terminal to reload PATH and apply new settings.
 
 <br />
+
 Set Execution Policy for Current User
 ------------------------------------
 
     Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser
 
 <br />
+
 Find Path for Terminal Profile
 -----------------------------
 
     echo $profile 
 
 <br />
+
 Debug OhMyPosh!
 ---------------
 
@@ -112,6 +122,7 @@ Debug OhMyPosh!
 
 <br />
 <br />
+
 Troubleshooting
 ----------------    
 
@@ -125,6 +136,7 @@ More help here:
 https://github.com/JanDeDobbeleer/oh-my-posh/discussions/3412
 
 <br />
+
 Cleaner Startup:
 ---------------
 
