@@ -1,4 +1,4 @@
-This Repo will enable you to install the fabulous Oh-My-Posh! on Windows Terminal, courtesy of https://github.com/JanDeDobbeleer/oh-my-posh
+This Repo will enable you to install the fabulous Oh-My-Posh! on Windows Terminal, courtesy of https://github.com/JanDeDobbeleer/oh-my-posh on Windows Server 2022, Windows 10 LTSC, Windows Server 2025 and Windows 11
 
 
 
