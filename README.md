@@ -1,4 +1,4 @@
-Install Winget via PowerShell
+Install Winget via PowerShell (if needed, i.e. on Windows Server 2022)
 -----------------------------
 
     Write-Host "Installing WinGet PowerShell module from PSGallery..."
@@ -6,8 +6,6 @@ Install Winget via PowerShell
     Install-Module -Name Microsoft.WinGet.Client -Force -Repository PSGallery | Out-Null
     Write-Host "Using Repair-WinGetPackageManager cmdlet to bootstrap WinGet..."
     Repair-WinGetPackageManager -AllUsers
-
-
 
 
 Fix Source Error on Winget option 1
@@ -29,16 +27,16 @@ Fix Source Error on Winget option for server 2022
 
 
 
+Install Windows Terminal (if needed)
+-----------------------------
+
+    winget install --id Microsoft.WindowsTerminal -e
+
+
 Install PowerShell 7
 -----------------------------
 
     winget install Microsoft.PowerShell
-
-
-Install Windows Terminal
------------------------------
-
-    winget install --id Microsoft.WindowsTerminal -e
 
 
 Open Terminal
