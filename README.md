@@ -1,7 +1,7 @@
 Introduction
 ------------
 
-This Repo will enable and guide you through the installation the fabulous Oh-My-Posh! on Windows Terminal, courtesy of [Jan DeDobbeleer](https://github.com/JanDeDobbeleer/oh-my-posh), on Windows Server 2019, Server 2022, Windows 10 LTSC, Windows Server 2025 and Windows 11. All files needed have been included, even the Iosevka Term Nerd Font Mono Regular Nerd TrueType Font used (Courtesy of [Nerd Fonts](https://www.nerdfonts.com/font-downloads))
+This Repo will enable and guide you through the installation the fabulous Oh-My-Posh! on Windows Terminal, courtesy of [Jan DeDobbeleer](https://github.com/JanDeDobbeleer/oh-my-posh), on Windows Server 2022, Windows 10 LTSC, Windows Server 2025 and Windows 11. All files needed have been included, even the Iosevka Term Nerd Font Mono Regular Nerd TrueType Font used (Courtesy of [Nerd Fonts](https://www.nerdfonts.com/font-downloads))
 
 For Windows 11 and Server 2025, scroll down to Installing PowerShell 7
 
@@ -50,15 +50,6 @@ Fix Source Error on Winget option for server 2022
     $r=Invoke-RestMethod 'https://api.github.com/repos/microsoft/winget-cli/releases/latest' -Headers @{'User-Agent'='PowerShell'}; $b=$r.assets|?{$_.name -match 'Microsoft\.DesktopAppInstaller.*\.msixbundle'}|select -First 1; $d=$r.assets|?{$_.name -match 'DesktopAppInstaller_Dependencies.*\.zip'}|select -First 1; $l=$r.assets|?{$_.name -match 'License.*\.xml'}|select -First 1; if(-not $b -or -not $d -or -not $l){Write-Error 'Missing required assets';exit 1}; Invoke-WebRequest $b.browser_download_url -OutFile $b.name;Invoke-WebRequest $d.browser_download_url -OutFile $d.name;Invoke-WebRequest $l.browser_download_url -OutFile $l.name;Expand-Archive -Path $d.name -DestinationPath .\Dependencies -Force;Get-ChildItem .\Dependencies -Recurse -File | ?{$_.Extension -match '\.msixbundle$|\.msix$|\.appx$'} | % { Write-Information "Installing $($_.FullName)"; Add-AppxPackage $_.FullName }; Add-AppxProvisionedPackage -Online -PackagePath .\$($b.name) -LicensePath .\$($l.name) -Verbose
     Write-Host "Completed - press Enter to continue"
 
-
-<br />
-
-Install WinGet on Server 2019
---------------------------
-
-    Install-Script -Name winget-install
-    winget-install
-    Write-Host "Completed - press Enter to continue"
 
 <br />
 
