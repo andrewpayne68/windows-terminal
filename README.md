@@ -62,8 +62,10 @@ Copy Microsoft.PowerShell_profile.ps1 to the $profile path (C:\USERS\DOCUMENTS\P
 Open Terminal
 -------------
 Settings:
-Under Profiles, Set Defaults - PowerShell, Starting directory to $USERPROFILE% , Appearance set Font to IosevkaTerm Nerd Font Mono ,
-Under Startup - set PowerShell, Default Terminal Application
+ - Profiles:
+     - Set Defaults - PowerShell, Starting directory to $USERPROFILE% , Appearance set Font to IosevkaTerm Nerd Font Mono ,
+- Startup:
+     - set PowerShell, Default Terminal Application
 
 Restart Terminal to reload PATH
 
