@@ -1,4 +1,4 @@
-This Repo will enable you to install the fabulous Oh-My-Posh! on Windows Terminal, courtesy of https://github.com/JanDeDobbeleer/oh-my-posh on Windows Server 2022, Windows 10 LTSC, Windows Server 2025 and Windows 11
+This Repo will enable you to install the fabulous Oh-My-Posh! on Windows Terminal, courtesy of https://github.com/JanDeDobbeleer/oh-my-posh on Windows Server 2022, Windows 10 LTSC, Windows Server 2025 and Windows 11. All files needed have been included, even the Nerd Font used (Courtesy of [Nerd Fonts](https://www.nerdfonts.com/font-downloads))
 
 
 
