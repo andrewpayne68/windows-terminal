@@ -48,16 +48,16 @@ Install JanDeDonneleer's OhMyPosh for Windows Terminal
 Install Nerd Font
 -----------------
 
-Install IosevkaTermNerdFontMono-Regular.ttf Nerd Font (included in repo files)
+Install `IosevkaTermNerdFontMono-Regular.ttf` Nerd Font (included in repo files)
 
 
 
 Files
 -----------------------------
 
-Copy jandedobbeleer.omp.json to home dir (~)  or C:\USERS\USERNAME
+Copy both `jandedobbeleer.omp.json` and `powershell.config.json` to home dir (~)  or C:\USERS\USERNAME
 
-Copy Microsoft.PowerShell_profile.ps1 to the $profile path (C:\USERS\DOCUMENTS\POWERSHELL\
+Copy `Microsoft.PowerShell_profile.ps1` to the $profile path (C:\USERS\DOCUMENTS\POWERSHELL\
 
 
 
