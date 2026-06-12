@@ -20,6 +20,10 @@ Install Winget via PowerShell (if needed, i.e. on Windows Server 2022)
     Install-Module -Name Microsoft.WinGet.Client -Force -Repository PSGallery | Out-Null
     Write-Host "Using Repair-WinGetPackageManager cmdlet to bootstrap WinGet..."
     Repair-WinGetPackageManager -AllUsers
+    winget source reset --force
+    winget source update
+    winget -v
+    
 <br />
 
 Fix Source Error on Winget option 1
