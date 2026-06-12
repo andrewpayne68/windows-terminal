@@ -5,9 +5,12 @@ This Repo will enable and guide you through the installation the fabulous Oh-My-
 
 For Windows 11 and Server 2025, scroll down to Installing PowerShell 7
 
+<br />
 
 
 <img width="1262" height="837" alt="screenshot" src="https://github.com/user-attachments/assets/7805987c-182a-4b6b-b193-ac5d9e8eb96c" />
+
+<br />
 
 Install Winget via PowerShell (if needed, i.e. on Windows Server 2022)
 -----------------------------
@@ -17,50 +20,56 @@ Install Winget via PowerShell (if needed, i.e. on Windows Server 2022)
     Install-Module -Name Microsoft.WinGet.Client -Force -Repository PSGallery | Out-Null
     Write-Host "Using Repair-WinGetPackageManager cmdlet to bootstrap WinGet..."
     Repair-WinGetPackageManager -AllUsers
-
+<br />
 
 Fix Source Error on Winget option 1
 -----------------------------
 
     winget source reset --force
     winget source update
-
+<br />
 Fix Source Error on Winget option 2
 -----------------------------
 
     Add-AppxPackage -Path '.\Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle'
     winget -v
-
+<br />
 Fix Source Error on Winget option for server 2022
 -----------------------------
 
     $r=Invoke-RestMethod 'https://api.github.com/repos/microsoft/winget-cli/releases/latest' -Headers @{'User-Agent'='PowerShell'}; $b=$r.assets|?{$_.name -match 'Microsoft\.DesktopAppInstaller.*\.msixbundle'}|select -First 1; $d=$r.assets|?{$_.name -match 'DesktopAppInstaller_Dependencies.*\.zip'}|select -First 1; $l=$r.assets|?{$_.name -match 'License.*\.xml'}|select -First 1; if(-not $b -or -not $d -or -not $l){Write-Error 'Missing required assets';exit 1}; Invoke-WebRequest $b.browser_download_url -OutFile $b.name;Invoke-WebRequest $d.browser_download_url -OutFile $d.name;Invoke-WebRequest $l.browser_download_url -OutFile $l.name;Expand-Archive -Path $d.name -DestinationPath .\Dependencies -Force;Get-ChildItem .\Dependencies -Recurse -File | ?{$_.Extension -match '\.msixbundle$|\.msix$|\.appx$'} | % { Write-Information "Installing $($_.FullName)"; Add-AppxPackage $_.FullName }; Add-AppxProvisionedPackage -Online -PackagePath .\$($b.name) -LicensePath .\$($l.name) -Verbose
 
 
-
+<br />
 Install Windows Terminal (if needed)
 -----------------------------
 
     winget install --id Microsoft.WindowsTerminal -e
 
+<br />
+<br />
+<br />
 
+Windows 11 and Server 2025 start here:
+=
+<br />
 Install PowerShell 7
 -----------------------------
 
     winget install Microsoft.PowerShell
-
+<br />
 Install JanDeDonneleer's OhMyPosh for Windows Terminal
 -----------------------------------------------------
 
     winget install JanDeDobbeleer.OhMyPosh
-
+<br />
 Install Nerd Font
 -----------------
 
 Install `IosevkaTermNerdFontMono-Regular.ttf` Nerd Font (included in repo files)
 
 
-
+<br />
 Files
 -----------------------------
 
@@ -69,7 +78,7 @@ Copy both `jandedobbeleer.omp.json` and `powershell.config.json` to home dir (~)
 Copy `Microsoft.PowerShell_profile.ps1` to the $profile path (C:\USERS\DOCUMENTS\POWERSHELL\
 
 
-
+<br />
 Open Terminal Settings
 -------------
 
@@ -82,27 +91,27 @@ Open Terminal Settings
 
 Restart Terminal to reload PATH and apply new settings.
 
-
+<br />
 Set Execution Policy for Current User
 ------------------------------------
 
     Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser
 
-
+<br />
 Find Path for Terminal Profile
 -----------------------------
 
     echo $profile 
 
-
+<br />
 Debug OhMyPosh!
 ---------------
 
     oh-my-posh debug
 
 
-
-
+<br />
+<br />
 Troubleshooting
 ----------------    
 
@@ -115,13 +124,13 @@ Troubleshooting
 More help here:
 https://github.com/JanDeDobbeleer/oh-my-posh/discussions/3412
 
-
+<br />
 Cleaner Startup:
 ---------------
 
 You can add 'pwsh.exe -nologo' to the Settings of Terminal (Command Line to launch PowerShell pwsh.exe)
 
-
+<br />
 
 <img width="1240" height="817" alt="Screenshot2026-06-12161942" src="https://github.com/user-attachments/assets/7d0ae71d-d85a-42d1-914d-436cb5128cb3" />
 
