@@ -69,6 +69,13 @@ Copy jandedobbeleer.omp.json to home dir (~)  or c:\users\andy
 Copy Microsoft.PowerShell_profile.ps1 to the $profile path
 
 
+Troubleshooting
+----------------    
+
+1. Check that the ps1 file in $profile is 'unblocked'
+2. Check that the folder under Documents is PowerShell (tip - I copy paste WindowsPowerShell folder if there and then rename to PowerShell) and place the profile.ps1 file inside
+3. Make sure you have run Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser
+4. Try opening the PowerShell 7 app itself in Admin mode - and run the Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser again.
 
 
 
