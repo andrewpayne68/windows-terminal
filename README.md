@@ -86,6 +86,12 @@ Find Path for Terminal Profile
     echo $profile 
 
 
+Debug OhMyPosh!
+---------------
+
+    oh-my-posh debug
+
+
 
 
 Troubleshooting
@@ -97,5 +103,7 @@ Troubleshooting
 4. Try opening the PowerShell 7 app itself in Admin mode - and run the Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser again.
 5. Make sure the jandedobbleleer.omp.json is in your user folder (c:\users\username)
 
+More help here:
+https://github.com/JanDeDobbeleer/oh-my-posh/discussions/3412
 
 
