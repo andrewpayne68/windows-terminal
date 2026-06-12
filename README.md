@@ -162,6 +162,16 @@ Before:
 
 <img width="1477" height="761" alt="Screenshot 2026-06-12 165332" src="https://github.com/user-attachments/assets/2a89ce0b-9bdc-49c6-9146-4feb04265fbc" />
 
+<br />
+<br />
+<br />
+
+After:
+--
+
+<img width="1262" height="837" alt="screenshot" src="https://github.com/user-attachments/assets/7805987c-182a-4b6b-b193-ac5d9e8eb96c" />
+
+
 
 
 
