@@ -56,6 +56,7 @@ Install Windows Terminal (if needed)
 Windows 11 and Server 2025 start here:
 =
 <br />
+
 Install PowerShell 7
 -----------------------------
 
