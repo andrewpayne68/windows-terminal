@@ -1,0 +1,75 @@
+Install Winget via PowerShell
+-----------------------------
+
+    Write-Host "Installing WinGet PowerShell module from PSGallery..."
+    Install-PackageProvider -Name NuGet -Force | Out-Null
+    Install-Module -Name Microsoft.WinGet.Client -Force -Repository PSGallery | Out-Null
+    Write-Host "Using Repair-WinGetPackageManager cmdlet to bootstrap WinGet..."
+    Repair-WinGetPackageManager -AllUsers
+    Write-Host "Done."
+
+
+
+#Fix Source Error on Winget option 1
+-----------------------------
+
+    winget source reset --force
+    winget source update
+
+#Fix Source Error on Winget option 2
+-----------------------------
+
+    Add-AppxPackage -Path '.\Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle'
+    winget -v
+
+#Fix Source Error on Winget option for server 2022
+-----------------------------
+
+    $r=Invoke-RestMethod 'https://api.github.com/repos/microsoft/winget-cli/releases/latest' -Headers @{'User-Agent'='PowerShell'}; $b=$r.assets|?{$_.name -match 'Microsoft\.DesktopAppInstaller.*\.msixbundle'}|select -First 1; $d=$r.assets|?{$_.name -match 'DesktopAppInstaller_Dependencies.*\.zip'}|select -First 1; $l=$r.assets|?{$_.name -match 'License.*\.xml'}|select -First 1; if(-not $b -or -not $d -or -not $l){Write-Error 'Missing required assets';exit 1}; Invoke-WebRequest $b.browser_download_url -OutFile $b.name;Invoke-WebRequest $d.browser_download_url -OutFile $d.name;Invoke-WebRequest $l.browser_download_url -OutFile $l.name;Expand-Archive -Path $d.name -DestinationPath .\Dependencies -Force;Get-ChildItem .\Dependencies -Recurse -File | ?{$_.Extension -match '\.msixbundle$|\.msix$|\.appx$'} | % { Write-Information "Installing $($_.FullName)"; Add-AppxPackage $_.FullName }; Add-AppxProvisionedPackage -Online -PackagePath .\$($b.name) -LicensePath .\$($l.name) -Verbose
+
+
+
+#Install PowerShell 7
+-----------------------------
+
+    winget install Microsoft.PowerShell
+
+
+#Install Windows Terminal
+-----------------------------
+
+    winget install --id Microsoft.WindowsTerminal -e
+
+
+Open Terminal
+
+Install IosevkaTermNerdFontMono-Regular.ttf Nerd Font
+
+Set Font etc under Settings
+
+    winget install JanDeDobbeleer.OhMyPosh
+    
+restart shell to reload PATH
+
+Set Execution Policy for Current User
+------------------------------------
+    Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser
+
+
+Find Path for Profile
+-----------------------------
+
+    echo $profile 
+
+Files
+-----------------------------
+
+Copy jandedobbeleer.omp.json to home dir (~)  or c:\users\andy
+
+Copy Microsoft.PowerShell_profile.ps1 to the $profile path
+
+
+
+
+
+
