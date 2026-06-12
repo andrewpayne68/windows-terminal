@@ -71,7 +71,7 @@ Install `IosevkaTermNerdFontMono-Regular.ttf` Nerd Font (included in repo files)
 
 <br />
 Files
------------------------------
+-
 
 Copy both `jandedobbeleer.omp.json` and `powershell.config.json` to home dir (~)  or C:\USERS\USERNAME
 
