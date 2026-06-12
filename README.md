@@ -153,6 +153,16 @@ Special Thanks
 
 Special thanks to the excellent guide by [Scott Hanselman](https://www.hanselman.com/blog/my-ultimate-powershell-prompt-with-oh-my-posh-and-the-windows-terminal) which inspired me to create this guide.
 
+<br />
+<br />
+<br />
+
+Before:
+--
+
+<img width="1477" height="761" alt="Screenshot 2026-06-12 165332" src="https://github.com/user-attachments/assets/2a89ce0b-9bdc-49c6-9146-4feb04265fbc" />
+
+
 
 
 
