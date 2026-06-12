@@ -147,6 +147,11 @@ You can add 'pwsh.exe -nologo' to the Settings of Terminal (Command Line to laun
 <img width="1240" height="817" alt="Screenshot2026-06-12161942" src="https://github.com/user-attachments/assets/7d0ae71d-d85a-42d1-914d-436cb5128cb3" />
 
 
+Special Thanks
+--
+
+Special thanks to the excellent guide by [Scott Hanselman](https://www.hanselman.com/blog/my-ultimate-powershell-prompt-with-oh-my-posh-and-the-windows-terminal) which inspired me to create this guide.
+
 
 
 
