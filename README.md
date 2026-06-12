@@ -80,9 +80,9 @@ Install `IosevkaTermNerdFontMono-Regular.ttf` Nerd Font (included in repo files)
 Files
 ------
 
-Copy both `jandedobbeleer.omp.json` and `powershell.config.json` to home dir (~)  or C:\USERS\USERNAME
+Copy `jandedobbeleer.omp.json` to home dir (~)  or C:\USERS\USERNAME
 
-Copy `Microsoft.PowerShell_profile.ps1` to the $profile path (C:\USERS\USERNAME\DOCUMENTS\POWERSHELL\
+Copy `Microsoft.PowerShell_profile.ps1` and `powershell.config.json` to the $profile path (C:\USERS\USERNAME\DOCUMENTS\POWERSHELL\
 
 
 <br />
