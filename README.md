@@ -107,3 +107,16 @@ More help here:
 https://github.com/JanDeDobbeleer/oh-my-posh/discussions/3412
 
 
+Cleaner Startup:
+---------------
+
+You can add 'pwsh.exe -nologo' to the Settings of Terminal (Command Line to launch PowerShell pwsh.exe)
+
+
+
+<img width="1240" height="817" alt="Screenshot2026-06-12161942" src="https://github.com/user-attachments/assets/7d0ae71d-d85a-42d1-914d-436cb5128cb3" />
+
+
+
+
+
