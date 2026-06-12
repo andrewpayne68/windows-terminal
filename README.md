@@ -1,3 +1,5 @@
+<img width="1262" height="837" alt="screenshot" src="https://github.com/user-attachments/assets/7805987c-182a-4b6b-b193-ac5d9e8eb96c" />
+
 Install Winget via PowerShell (if needed, i.e. on Windows Server 2022)
 -----------------------------
 
