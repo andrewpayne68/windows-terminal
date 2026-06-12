@@ -38,33 +38,48 @@ Install PowerShell 7
 
     winget install Microsoft.PowerShell
 
-
-Open Terminal
-
-Install IosevkaTermNerdFontMono-Regular.ttf Nerd Font
-
-Set Font etc under Settings
+Install JanDeDonneleer's OhMyPosh for Windows Terminal
+-----------------------------------------------------
 
     winget install JanDeDobbeleer.OhMyPosh
-    
-restart shell to reload PATH
 
-Set Execution Policy for Current User
-------------------------------------
-    Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser
+Install Nerd Font
+-----------------
+
+Install IosevkaTermNerdFontMono-Regular.ttf Nerd Font (included in repo files)
 
 
-Find Path for Profile
------------------------------
-
-    echo $profile 
 
 Files
 -----------------------------
 
-Copy jandedobbeleer.omp.json to home dir (~)  or c:\users\andy
+Copy jandedobbeleer.omp.json to home dir (~)  or C:\USERS\USERNAME
 
-Copy Microsoft.PowerShell_profile.ps1 to the $profile path
+Copy Microsoft.PowerShell_profile.ps1 to the $profile path (C:\USERS\DOCUMENTS\POWERSHELL\
+
+
+
+Open Terminal
+-------------
+Settings:
+Under Profiles, Set Defaults - PowerShell, Starting directory to $USERPROFILE% , Appearance set Font to IosevkaTerm Nerd Font Mono ,
+Under Startup - set PowerShell, Default Terminal Application
+
+Restart Terminal to reload PATH
+
+
+Set Execution Policy for Current User
+------------------------------------
+
+    Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser
+
+
+Find Path for Terminal Profile
+-----------------------------
+
+    echo $profile 
+
+
 
 
 Troubleshooting
