@@ -3,6 +3,8 @@ Introduction
 
 This Repo will enable and guide you through the installation the fabulous Oh-My-Posh! on Windows Terminal, courtesy of [Jan DeDobbeleer](https://github.com/JanDeDobbeleer/oh-my-posh), on Windows Server 2022, Windows 10 LTSC, Windows Server 2025 and Windows 11. All files needed have been included, even the Iosevka Term Nerd Font Mono Regular Nerd TrueType Font used (Courtesy of [Nerd Fonts](https://www.nerdfonts.com/font-downloads))
 
+For Windows 11 and Server 2025, scroll down to Installing PowerShell 7
+
 
 
 <img width="1262" height="837" alt="screenshot" src="https://github.com/user-attachments/assets/7805987c-182a-4b6b-b193-ac5d9e8eb96c" />
