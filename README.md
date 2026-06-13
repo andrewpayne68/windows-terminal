@@ -14,7 +14,7 @@ Note: I could not get this to work in Server 2019, despite successfully installi
 
 <br />
 
-Install Winget via PowerShell (if needed, i.e. on Windows Server 2022)
+Install WinGet via PowerShell (if needed, i.e. on Windows Server 2022)
 -----------------------------
 
     Write-Host "Installing WinGet PowerShell module from PSGallery..."
@@ -30,7 +30,7 @@ Install Winget via PowerShell (if needed, i.e. on Windows Server 2022)
     
 <br />
 
-Fix Source Error on Winget option 1
+Fix Source Error on WinGet option 1
 -----------------------------
 
     winget source reset --force
@@ -38,7 +38,7 @@ Fix Source Error on Winget option 1
     Write-Host "Completed - press Enter to continue"
 <br />
 
-Fix Source Error on Winget option 2
+Fix Source Error on WinGet option 2
 -----------------------------
 
     Add-AppxPackage -Path '.\Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle'
@@ -46,7 +46,7 @@ Fix Source Error on Winget option 2
     Write-Host "Completed - press Enter to continue"
 <br />
 
-Fix Source Error on Winget option for server 2022
+Fix Source Error on WinGet option for server 2022
 -----------------------------
 
     $r=Invoke-RestMethod 'https://api.github.com/repos/microsoft/winget-cli/releases/latest' -Headers @{'User-Agent'='PowerShell'}; $b=$r.assets|?{$_.name -match 'Microsoft\.DesktopAppInstaller.*\.msixbundle'}|select -First 1; $d=$r.assets|?{$_.name -match 'DesktopAppInstaller_Dependencies.*\.zip'}|select -First 1; $l=$r.assets|?{$_.name -match 'License.*\.xml'}|select -First 1; if(-not $b -or -not $d -or -not $l){Write-Error 'Missing required assets';exit 1}; Invoke-WebRequest $b.browser_download_url -OutFile $b.name;Invoke-WebRequest $d.browser_download_url -OutFile $d.name;Invoke-WebRequest $l.browser_download_url -OutFile $l.name;Expand-Archive -Path $d.name -DestinationPath .\Dependencies -Force;Get-ChildItem .\Dependencies -Recurse -File | ?{$_.Extension -match '\.msixbundle$|\.msix$|\.appx$'} | % { Write-Information "Installing $($_.FullName)"; Add-AppxPackage $_.FullName }; Add-AppxProvisionedPackage -Online -PackagePath .\$($b.name) -LicensePath .\$($l.name) -Verbose
