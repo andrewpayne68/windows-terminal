@@ -71,7 +71,7 @@ Install PowerShell 7
 
     winget install Microsoft.PowerShell
 
-or
+or, in case of "Failed when seaching source: msstore" error:
 
     winget install Microsoft.Powershell --source winget
 
