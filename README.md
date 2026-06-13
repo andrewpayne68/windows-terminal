@@ -5,6 +5,8 @@ This Repo will enable and guide you through the installation the fabulous Oh-My-
 
 For Windows 11 and Server 2025, scroll down to Installing PowerShell 7
 
+Note: I could not get this to work in Server 2019, despite successfully installing WinGet, the Terminal was a no-go.
+
 <br />
 
 
