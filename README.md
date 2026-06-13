@@ -70,6 +70,11 @@ Install PowerShell 7
 -----------------------------
 
     winget install Microsoft.PowerShell
+
+or
+
+    winget install Microsoft.Powershell --source winget
+
 <br />
 
 Install JanDeDonneleer's OhMyPosh for Windows Terminal
