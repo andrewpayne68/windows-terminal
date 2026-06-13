@@ -146,11 +146,12 @@ Debug OhMyPosh!
 Troubleshooting
 ----------------    
 
-1. Check that the ps1 file in $profile is 'unblocked'
-2. Check that the folder under Documents is PowerShell (tip - I copy paste WindowsPowerShell folder if there and then rename to PowerShell) and place the profile.ps1 file inside
-3. Make sure you have run Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser
-4. Try opening the PowerShell 7 app itself in Admin mode - and run the Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser again.
-5. Make sure the jandedobbleleer.omp.json is in your user folder (c:\users\username)
+1. Check that the `Microsoft.PowerShell_profile.ps1` file in $profile is 'unblocked'
+2. In case of CONFIG ERROR - make sure the `jandedobbeleer.omp.json` file is present in your `C:\users\ [username]` folder
+3. Check that the folder under Documents is named `PowerShell` (tip - I copy paste WindowsPowerShell folder if there and then rename copied folder to PowerShell) and copy both `Microsoft.PowerShell_profile.ps1` and `powershell.config.json` files inside
+4. Make sure you have run Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser
+5. Try opening the PowerShell 7 app itself in Admin mode - and run the Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser again.
+6. Make sure the jandedobbleleer.omp.json is in your user folder (c:\users\username)
 
 More help here:
 https://github.com/JanDeDobbeleer/oh-my-posh/discussions/3412
