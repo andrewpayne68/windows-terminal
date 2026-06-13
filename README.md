@@ -81,6 +81,11 @@ Install JanDeDonneleer's OhMyPosh for Windows Terminal
 -----------------------------------------------------
 
     winget install JanDeDobbeleer.OhMyPosh
+
+or, in case of "Failed when seaching source: msstore" error:
+
+    winget install JanDeDobbeleer.OhMyPosh --source winget
+
 <br />
 
 Install Nerd Font
