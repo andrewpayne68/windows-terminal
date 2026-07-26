@@ -148,7 +148,7 @@ Debug OhMyPosh!
 Troubleshooting
 ----------------    
 
-1. Check that the `Microsoft.PowerShell_profile.ps1` file in $profile is 'unblocked'
+1. IMPORTANT - Check that the `Microsoft.PowerShell_profile.ps1` file in $profile is 'unblocked' same as the two files under Documents/PowerShell are unblocked too - as Windows always blocks files downloaded from the Internet.
 2. In case of CONFIG ERROR - make sure the `jandedobbeleer.omp.json` file is present in your `C:\users\ [username]` folder
 3. Check that the folder under Documents is named `PowerShell` (tip - I copy paste WindowsPowerShell folder if there and then rename copied folder to PowerShell) and copy both `Microsoft.PowerShell_profile.ps1` and `powershell.config.json` files inside
 4. Make sure you have run `Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser` whilst in the `PowerShell` area of Terminal (configured in Settings as Startup Profile)
